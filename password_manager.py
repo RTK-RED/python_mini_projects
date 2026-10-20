@@ -1,11 +1,18 @@
 from cryptography.fernet import Fernet
+#use below code to generate a key for the first time and then comment it out after that.
+def write_key():
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)
 
-'''
+#use below code to generate a key for the first time and then comment it out after that.
+''' 
 def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
         key_file.write(key)
 '''
+
 
 
 def load_key():
